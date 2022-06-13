@@ -27,3 +27,8 @@ def update_transaction():
 def delete_transaction():
         data = Transaction.deleteTransaction()
         return data
+
+@bp_app.route('/transaction_base_on_wallet', methods=['POST'])
+def transaction_base_on_wallet():
+    data = Transaction.allCurrencyWallet()
+    return data        

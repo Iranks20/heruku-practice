@@ -1,0 +1,1 @@
+UPDATE user SET status=%s WHERE user_id  =  '99781c47-e3d8-45f5-9b1b-99f76bbc0260'

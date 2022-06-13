@@ -1,13 +1,19 @@
-from urllib import response
+#from urllib import response
 from flask import Blueprint, request, jsonify, json
 from application.models.user_wallet import UserWallet
 
 bp_app = Blueprint('mod_wallet', __name__)
 
 #create wallet
-@bp_app.route('/create_wallet', methods=['POST'])
-def create_wallet():
-    data = UserWallet.createWallet()
+#@bp_app.route('/create_wallet', methods=['POST'])
+#def create_wallet():
+    #data = UserWallet.createWallet()
+    #return data
+
+# create other wallets
+@bp_app.route('/create_other_wallet', methods=['POST'])
+def createOtherWallet():
+    data = UserWallet.otherWallets()
     return data
 
 # delete a wallet

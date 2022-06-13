@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify, json
 from application.models.user import User
+import hashlib
 #from application.libs.modal import Modal as md
 
 bp_app = Blueprint('mod_user', __name__)
@@ -34,6 +35,18 @@ def delete_user():
 @bp_app.route("/login_user", methods=["POST"])
 def login_user():
     data = User.loginUser()
+    return data
+
+# verify otp
+@bp_app.route("/verify_otp", methods=['POST'])
+def verify_otp():
+    data = User.verifyOTP()
+    return data
+
+#get user details by id
+@bp_app.route('/get_user_by_id', methods=['POST'])
+def get_user_by_id():
+    data = User.getUserDetailsById()
     return data
 
 

@@ -80,7 +80,7 @@ class Database:
         sql = "UPDATE " + table + " SET " + data + " WHERE " + where
 
 
-    def write_to_file(data):
-        f = open("output.txt", "w")
-        f.write(data)
-        f.close()
+def write_to_file(data):
+    f = open("output.txt", "w")
+    f.write(data)
+    f.close()

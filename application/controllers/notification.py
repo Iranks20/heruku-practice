@@ -20,5 +20,5 @@ def getNotifications():
     #deletenotification
 @bp_app.route('/delete_notification', methods=['DELETE'])
 def delete_notification():
-    data = Notification.deleteNotification()
+    data = Notification.deleteNotificatio()
     return data  
